@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+.bx-wrapper {
+    width: 775px;
+}
+.slider-nav > div {
+    float: left;
+    border: 3px solid #fff;
+}
+
+.slider-nav > div a {
+    display: block;
+    cursor: pointer;
+}
+
+.slider-nav > div a.active {
+    border-bottom: 3px solid #000;
+}
+
+.subscribe{
+    background-color: #00e1ff;
+    padding: 20px;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span{
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+input{
+    font-family: 'Comfortaa', cursive;
+    color: #00e1ff;
+    font-weight: 600;
+}
+
+.subscribeP{
+    color: #e3f1fc;
+}
+
+/*  шапка  */
+
+header{
+    display: flex;
+    padding: 20px;
+}
+
+.logo{
+    max-width: 300px;
+    max-height: 62px;
+    transition: transform 1s;
+}
+
+nav{
+    margin-right: 10%;
+    font-size: 24px;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    list-style: none;
+    margin-right: 20px;
+}
+
+.menu{
+    text-decoration: none;
+    color: #00e1ff ;
+}
+
+.menu:visited{
+    color:#77777700;
+}
+
+/*  main  */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.line{
+    width: 55%;
+    height: 2px;
+    background-color: #00e1ff ;
+}
+
+article{
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width:20%;
+}
+
+.img{
+    width: 100%;
+    transition: transform 2s;
+}
+
+.text{
+    background-color:#00e1ff ;
+    color:rgba(255, 70, 70, 0);
+    max-width: 100%;
+    padding: 15px;
+}
+
+/*  footer  */
+
+footer{
+    background-color: rgb(255, 70, 70);
+    color:#00e1ff;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.group{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footerA1{
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.footerA{
+    color:#00e1ff ;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.footerP{
+    margin-left: 30px;
+}
+.text{
+    color: rgb(255, 70, 70);
+}
+.menu:visited{
+    color: #77777700;
+    }
+    li:first-child:hover{
+        animation: move1 2s 1;
+    }
+    @keyframes move1 {
+        0%   { transform: rotate(180deg);}
+        50% { transform: scale(1.5); }
+        100% { transform: scale(1);}
+       }
+      li:last-child:hover{
+        animation: move3 2s 1;
+      }
+      @keyframes move3 {
+        0%   { transform: rotate(45deg);}
+        50% { transform: scale(1.7); }
+        100% { transform: scale(1.1);}
+    } 
+    li:nth-child(2):hover{
+        animation: move2 2s 1;
+      }
+      @keyframes move2 {
+        0%   { transform: rotate(90deg);}
+        50% { transform: scale(1.7); }
+        100% { transform: scale(1.1);}
+    } 
+    .card{
+        width:20%;
+        animation: moveCard 2s 1;
+       }
+       @keyframes moveCard{
+        0%   { margin-top: 100vh;}
+        100% { margin-top: 0;}
+       }
+       .adv{
+        width: 200px;
+        height: 300px;
+        padding:5px;
+        background-image: url(images/реклама.jpeg);
+        background-size: cover;
+    
+        position: absolute;
+        right:0;
+        bottom: 0;
+    
+        animation: advMove 3s 1;
+        animation-timing-function: ease-in;
+    }
+    h2{
+        font-size: 20px;
+    }
+@media (min-width: 992px) and (max-width: 1199px) {
+ 
+}
+
+/* планшеты вертикально */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* телефоны горизонтально */
+@media (max-width: 767px) {
+
+}
+
+/* телефоны вертикально */
+@media (max-width: 480px) {
+
+}
+/* планшеты горизонтально */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .card{
+        width:30%;
+    }
+}
+/* планшеты вертикально */
+@media (min-width: 768px) and (max-width: 991px) {
+    input{
+        max-width: 100px;
+    }
+    main{
+        min-height:65vh;
+    }
+    .card{
+        width:30%;
+    }
+}
+/* телефоны горизонтально */
+@media (max-width: 767px) {
+    span{
+        font-size: 20px;
+    }
+    input{
+        max-width: 100px;
+    }
+    header,article{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 50%;
+        padding-bottom: 10px;
+    }
+}
+/* телефоны вертикально */
+@media (max-width: 480px) {
+    header{
+        flex-direction: column;
+    }
+    nav{
+        margin-right:0;
+    }
+    li{
+        margin-right: 5px;
+    }
+    .card{
+        width: 70%;
+    }
+    .group{
+        flex-direction: column;
+        padding-left:5px;
+    }
+}
+.logo{
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 1s;
+       
+        animation: fadeInLeftBig 3s 1;
+}
+body {
+    padding: 50px;
+}
